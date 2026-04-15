@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nattelier - კონტაქტი</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <script src="../scripts/global.js" defer></script>
+    <script src="../scripts/contact.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html">
+                <img src="../images/logo.png" alt="Nattelier ლოგო" width="130">
+            </a>
+            <div>
+                <h1>Nattelier</h1>
+                <p>ესთეტიკა თქვენი ინტერიერისთვის</p>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-inner">
+            <button class="burger">☰</button>
+            <ul>
+                <li><a href="../index.html">მთავარი</a></li>
+                <li><a href="./about.html">ჩვენს შესახებ</a></li>
+                <li><a href="./news.html">სიახლეები</a></li>
+                <li><a href="./products.html">პროდუქცია</a></li>
+                <li><a href="./contact.html" class="active">კონტაქტი</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <section class="contact-section">
+            <div class="contact-header">
+                <h2>დაგვიკავშირდით</h2>
+                <p>გაქვთ კითხვები ან გსურთ ინდივიდუალური შეკვეთა? შეავსეთ ფორმა და ჩვენი გუნდი მალე დაგიკავშირდებათ.</p>
+            </div>
+            <div class="contact-wrapper">
+                <form id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="username">სახელი და გვარი</label>
+                        <input type="text" id="username" placeholder="მაგ: ნათია კაპანაძე">
+                        <small class="error-text"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">ტელეფონის ნომერი</label>
+                        <input type="tel" id="phone" placeholder="5XX XX XX XX">
+                        <small class="error-text"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">ელ-ფოსტა</label>
+                        <input type="email" id="email" placeholder="example@mail.com">
+                        <small class="error-text"></small>
+                    </div>
+                    <data class="form-group password-wrapper">
+                        <label for="password">პაროლი (სისტემაში შესასვლელად)</label>
+                        <div class="input-container">
+                            <input type="password" id="password" placeholder="შეიყვანეთ პაროლი">
+                            <button type="button" id="togglePassword" class="toggle-btn">👁️</button>
+                        </div>
+                        <small class="error-text"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">თქვენი შეტყობინება</label>
+                        <textarea id="message" rows="5" placeholder="დაწვრილებით მოგვიყევით თქვენი სურვილის შესახებ..."></textarea>
+                        <small class="error-text"></small>
+                    </div>
+                    <button type="submit" class="submit-btn">გაგზავნა</button>         
+                    <div id="form-success" class="success-msg" style="display: none;"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <p>ტელ: <a href="tel:+995591932442"><strong>+995 591 93 24 42</strong></a></p>
+            <p>ელ-ფოსტა: <a href="mailto:nattya747@gmail.com"><strong>nattya747@gmail.com</strong></a></p>
+            <p>საავტორო უფლებები &copy; 2026 <strong>Nattelier</strong></p>
+        </div>
+    </footer>
+    <button id="scroll-top" title="ზემოთ ასვლა">
+        <img src="../images/arrow-up.svg" alt="ისარი">
+    </button>
+</body>
+</html>
