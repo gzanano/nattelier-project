@@ -7,8 +7,23 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const togglePassword = document.getElementById('togglePassword');
+    const username = document.getElementById('username');
+    const phone = document.getElementById('phone');
+    const email = document.getElementById('email');
     const passwordField = document.getElementById('password');
+    const message = document.getElementById('message');
+    const togglePassword = document.getElementById('togglePassword');
+
+    if (phone) {
+        phone.addEventListener('input', () => {
+            phone.value = phone.value.replace(/[^0-9]/g, '');
+        });
+    }
+    if (username) {
+        username.addEventListener('input', () => {
+            username.value = username.value.replace(/[^a-zA-Zა-ჰ\s]/g, '');
+        });
+    }
 
     // 1. password hide/show functionality
     if (togglePassword && passwordField) {
@@ -25,14 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("ღილაკს დაეჭირა, ვალიდაცია დაიწყო...");
 
         let isValid = true;
-        const username = document.getElementById('username');
-        const phone = document.getElementById('phone');
-        const email = document.getElementById('email');
-        const password = document.getElementById('password');
-        const message = document.getElementById('message');
 
         const showError = (input, msg) => {
             input.classList.add('invalid');
+            input.classList.remove('valid');
             const errorElement = input.parentElement.querySelector('.error-text');
             if (errorElement) errorElement.innerText = msg;
             isValid = false;
@@ -58,8 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
             showError(phone, "ფორმატი: 5XXXXXXXX");
         } else { showSuccess(phone); }
 
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email.value)) {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(email.value.trim())) {
             showError(email, "არასწორი მეილი");
         } else { showSuccess(email); }
 

@@ -213,6 +213,10 @@ main ul li {
     background-color: var(--color-bg-alt);
 }
 
+.video-grid video:hover {
+    transform: translateY(-5px);
+}
+
 .video-grid-two {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
