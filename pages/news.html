@@ -33,6 +33,7 @@
                 <li><a href="./news.html" class="active">სიახლეები</a></li>
                 <li><a href="./products.html">პროდუქცია</a></li>
                 <li><a href="./contact.html">კონტაქტი</a></li>
+                <li><a href="#" class="cart-icon">🛒 კალათა</a></li>
             </ul>
         </div>
     </nav>
@@ -93,5 +94,22 @@
     <button id="scroll-top" title="ზემოთ ასვლა">
         <img src="../images/arrow-up.svg" alt="ისარი">
     </button>
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h2>კალათა (<span id="cart-count">0</span>)</h2>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items-container">
+            <p class="empty-msg">კალათა ცარიელია</p>
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal">
+                <span>ჯამი:</span>
+                <span id="cart-total">0 ₾</span>
+            </div>
+            <button class="checkout-btn">შეძენა</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
 </body>
 </html>

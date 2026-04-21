@@ -1,11 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     
-    // form exists check
-    if (!contactForm) {
-        console.error("ფორმა ID-ით 'contact-form' ვერ მოიძებნა!");
-        return;
-    }
+    // if the form doesn't exist on this page, we don't need to set up any listeners
+    if (!contactForm) return; 
 
     const username = document.getElementById('username');
     const phone = document.getElementById('phone');

@@ -392,6 +392,84 @@ footer a:hover {
     filter: brightness(0) invert(1);
 }
 
+/* shopping cart */
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background-color: #fdfaf5;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 1001;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+}
+
+.cart-drawer.active {
+    right: 0;
+}
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1000;
+}
+
+.cart-overlay.active {
+    display: block;
+}
+
+/* design details */
+.cart-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-items-container {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.cart-footer {
+    padding: 20px;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #5a4633;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkout-btn:hover {
+    background-color: #453526;
+}
+
 /* ==========================================================================
    products page
    ========================================================================== */
